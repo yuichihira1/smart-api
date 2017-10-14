@@ -7,7 +7,7 @@ end
 
 
 gem 'rails', '~> 5.1.3'
-gem 'mysql2', '~> 3.1.8'
+gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'puma', '~> 3.7'
 gem 'active_model_serializers'
 gem 'redis', '~> 3.0'
