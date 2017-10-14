@@ -15,12 +15,11 @@ module Api::V1
 		    end
 		end
 
-		private
+	private
 
 
-		  def user_params
-		  	params.require(:user).permit(:name, :mail, :password, :password_confirmation)
-		  end
+	  def user_params
+	  	params.require(:user).permit(:name, :mail, :password, :password_confirmation)
 	  end
 	end
 end
