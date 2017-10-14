@@ -1,6 +1,9 @@
 module Api::V1
 	class V1::UsersController < ApplicationController
 
+		def index
+	    render json: { status: 200, message: 'Success' }
+	   end
 
 		def create
 			@user = User.new(user_params)
