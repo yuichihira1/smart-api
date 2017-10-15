@@ -3,6 +3,8 @@ class ApplicationController < ActionController::API
 	 include ActionController::Serialization
 	 include AbstractController::Translation
 
+	 before_action :authenticate
+
 	 def authenticate
 	 	authenticate_token || render_unauthorized
 	 end
