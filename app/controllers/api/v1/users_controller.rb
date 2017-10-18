@@ -1,5 +1,6 @@
 module Api::V1
-	class V1::UsersController < ApplicationController
+	class API::V1::UsersController < ApplicationController
+		skip_before_action :authenticate, only: [:index, :create]
 
 		def index
 	    render json: { status: 200, message: 'Success' }
