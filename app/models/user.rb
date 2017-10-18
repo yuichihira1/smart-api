@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 	has_secure_password validations: true
 
-	befpre_create do|user|
+	before_create do|user|
 		user.access_token = user.generate_auth_token
 	end
 
@@ -12,5 +12,5 @@ class User < ApplicationRecord
 		end
 	end
 
-  validates :mail, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 end
