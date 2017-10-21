@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
 	def generate_auth_token
 		loop do
-			token = SourceRandom.base64.tr('+/=', 'Qrt')
+			token = SecureRandom.base64.tr('+/=', 'Qrt')
 			break token unless User.exixts?(access_token: token)
 		end
 	end
