@@ -18,4 +18,5 @@
 !/tmp/.keep
 /*vendor
 /*test
+*.idea
 .byebug_history
