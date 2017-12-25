@@ -16,6 +16,14 @@ module API::V1
 		    end
 		end
 
+		def show
+			if @current_user
+				render json: @current_user
+			else
+				render json: {error: t('user_request_error') }, status: :unprocessable_entity
+			end
+		end
+
 	private
 
 
