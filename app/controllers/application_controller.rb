@@ -5,6 +5,7 @@ class ApplicationController < ActionController::API
 
 	 before_action :authenticate
 
+   protected
 	 def authenticate
 	 	authenticate_token || render_unauthorized
 	 end
