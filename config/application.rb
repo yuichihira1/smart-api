@@ -29,5 +29,6 @@ module SmartApi
     end
 
     config.api_only = true
+    config.debug_exception_response_format = :api
   end
 end
